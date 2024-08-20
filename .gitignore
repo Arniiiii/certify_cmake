@@ -3,3 +3,8 @@ buildir
 .directory
 CMakeSettings.json
 .vs
+compile_commands.json
+.cache/
+build*/
+cmake_build*/
+install_dir/

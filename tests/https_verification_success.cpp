@@ -2,6 +2,7 @@
 
 #include <boost/certify/verification_utils.hpp>
 #include <boost/core/lightweight_test.hpp>
+#include <boost/filesystem/directory.hpp>
 
 int
 main()
