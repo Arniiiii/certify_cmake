@@ -130,7 +130,9 @@ packageproject(
   YES
   # (optional) option to generate CPack variables
   CPACK
-  YES)
+  YES
+  DEPENDENCIES
+  "${ADDBOOSTCMAKE_PACKAGEPROJECT_INSTALL_TARGETS};OpenSSL 3.0")
 
 if(${${PROJECT_NAME}_BUILD_EXAMPLES})
   add_subdirectory(examples)
