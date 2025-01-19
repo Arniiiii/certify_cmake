@@ -3,10 +3,19 @@
 #include <boost/certify/verification_utils.hpp>
 #include <boost/core/lightweight_test.hpp>
 #include <boost/filesystem/directory.hpp>
+#include <iostream>
 
 int
-main()
+main(int argc, char** argv, char** envp)
 {
+    if (argc != 2)
+    {
+        std::cout << "Amount of console arguments is not equal to 2. The "
+                     "current amount is "
+                  << argc << " .\n";
+        return 1;
+    }
+
     ::SSL_library_init();
 
     boost::certify::certificate_store store;
@@ -14,7 +23,7 @@ main()
 
     int count = 0;
     for (auto const& entry : boost::filesystem::directory_iterator{
-           "libs/certify/tests/res/success_chains/"})
+           std::string(argv[1]) + "/success_chains/"})
     {
         boost::system::error_code ec;
         boost::certify::verify_chain(entry.path(), store, ec);
