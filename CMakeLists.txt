@@ -116,7 +116,7 @@ packageproject(
   "${PROJECT_NAME}/export.h"
   # (optional) install your library with a namespace (Note: do NOT add extra
   # '::') 
-  NAMESPACE ${PROJECT_NAMESPACE} 
+  NAMESPACE ${PROJECT_NAME}
   # (optional) define the project's version
   # compatibility, defaults to `AnyNewerVersion` supported values:
   # `AnyNewerVersion|SameMajorVersion|SameMinorVersion|ExactVersion`
