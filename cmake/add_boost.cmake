@@ -1,7 +1,5 @@
 include(${CMAKE_CURRENT_LIST_DIR}/getCPM.cmake)
 
-cpmaddpackage(
-  NAME AddBoost.CMake VERSION 3.3 URL
-  https://github.com/Arniiiii/AddBoost.cmake/archive/refs/tags/3.3.tar.gz)
+find_package(AddBoost.cmake REQUIRED)
 # cpmaddpackage( NAME AddBoost.CMake VERSION 3.3 URL GITHUB_REPOSITORY
 # Arniiiii/AddBoost.cmake GIT_TAG testing)
