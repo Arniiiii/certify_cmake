@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 
 project(
   certify
-  VERSION 0.2.1
+  VERSION 0.2.2
   LANGUAGES CXX)
 
 if(${${PROJECT_NAME}_TEST_INSTALLED_VERSION})
