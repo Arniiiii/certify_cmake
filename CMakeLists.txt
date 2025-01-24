@@ -40,7 +40,6 @@ option(${PROJECT_NAME}_BUILD_TESTS "Build tests?"
        ${${PROJECT_NAME}_DEFAULT_VAL})
 
 add_library(${PROJECT_NAME} INTERFACE)
-add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 target_compile_features(${PROJECT_NAME} INTERFACE cxx_std_11)
 
@@ -116,7 +115,9 @@ packageproject(
   EXPORT_HEADER
   "${PROJECT_NAME}/export.h"
   # (optional) install your library with a namespace (Note: do NOT add extra
-  # '::') NAMESPACE ${PROJECT_NAMESPACE} (optional) define the project's version
+  # '::') 
+  NAMESPACE ${PROJECT_NAMESPACE} 
+  # (optional) define the project's version
   # compatibility, defaults to `AnyNewerVersion` supported values:
   # `AnyNewerVersion|SameMajorVersion|SameMinorVersion|ExactVersion`
   COMPATIBILITY
